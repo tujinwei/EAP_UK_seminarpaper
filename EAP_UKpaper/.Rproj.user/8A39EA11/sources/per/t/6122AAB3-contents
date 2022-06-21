@@ -1,0 +1,380 @@
+@article{RN38,
+   title = {FTSE 100 Constituent history},
+   type = {Journal Article}
+}
+
+@misc{RN31,
+   title = {Worldscope_Data_Definition_Guide_Issue_15},
+   publisher = {Thomson Reuters},
+   type = {Online Database}
+}
+
+@misc{RN1,
+   title = {FTSE UK Equity Income},
+   publisher = {FTSE Russell},
+   year = {2022},
+   type = {Online Database}
+}
+
+@article{RN55,
+   author = {Alan Gregory, Rajesh Tharyan and Angela Huang},
+   title = {The Fama-French and Momentum Portfolios and Factors in the UK},
+   type = {Journal Article}
+}
+
+@article{RN56,
+   author = {Andrew Chan, Alice P.L. Chu},
+   title = {An Empirical Re-examination of the Cross Section of Expected Returns: UK Evidence},
+   type = {Journal Article}
+}
+
+@article{RN34,
+   author = {Bai, Hang},
+   title = {Asymmetric Investment Rates},
+   type = {Journal Article}
+}
+
+@article{RN35,
+   author = {Bessler, Wolfgang and Taushanov, Georgi and Wolff, Dominik},
+   title = {Factor investing and asset allocation strategies: a comparison of factor versus sector optimization},
+   journal = {Journal of Asset Management},
+   volume = {22},
+   number = {6},
+   pages = {488-506},
+   ISSN = {1470-8272
+1479-179X},
+   DOI = {10.1057/s41260-021-00225-1},
+   year = {2021},
+   type = {Journal Article}
+}
+
+@article{RN36,
+   author = {Bielstein, Patrick and Hanauer, Matthias X.},
+   title = {Mean-variance optimization using forward-looking return estimates},
+   journal = {Review of Quantitative Finance and Accounting},
+   volume = {52},
+   number = {3},
+   pages = {815-840},
+   ISSN = {0924-865X
+1573-7179},
+   DOI = {10.1007/s11156-018-0727-4},
+   year = {2018},
+   type = {Journal Article}
+}
+
+@article{RN9,
+   author = {Blitz, David and Hanauer, Matthias X. and Vidojevic, Milan and Vliet, Pim van},
+   title = {Five Concerns with the Five-Factor Model},
+   journal = {The Journal of Portfolio Management},
+   volume = {44},
+   number = {4},
+   pages = {71-78},
+   ISSN = {0095-4918
+2168-8656},
+   DOI = {10.3905/jpm.2018.44.4.071},
+   year = {2018},
+   type = {Journal Article}
+}
+
+@article{RN10,
+   author = {Blitz, Hanauer},
+   title = {Resurrecting the value premium},
+   year = {2021},
+   type = {Journal Article}
+}
+
+@article{RN8,
+   author = {Clifford Asness, Andrea Frazzini, Ronen Israel, Tobias Moskowitz},
+   title = {Fact, Fiction, and Value Investing},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{RN42,
+   author = {David Blitz, Matthias X. Hanauer},
+   title = {Five Concerns with the Five-Factor Model},
+   type = {Journal Article}
+}
+
+@article{RN43,
+   author = {David Blitz, Matthias X. Hanauer, Milan Vidojevic},
+   title = {The Idiosyncratic Momentum Anomaly},
+   type = {Journal Article}
+}
+
+@article{RN57,
+   author = {Eoghan Nichol, Michael Dowling},
+   title = {Profitability and Investment Factors for UK Asset Pricing Models},
+   type = {Journal Article}
+}
+
+@article{RN16,
+   author = {Fama, Eugene F.},
+   title = {Common Risk Factors in the Returns on Stocks and Bonds},
+   year = {1993},
+   type = {Journal Article}
+}
+
+@article{RN17,
+   author = {Fama, Eugene F. and French, Kenneth R.},
+   title = {A five-factor asset pricing model},
+   journal = {Journal of Financial Economics},
+   volume = {116},
+   number = {1},
+   pages = {1-22},
+   ISSN = {0304405X},
+   DOI = {10.1016/j.jfineco.2014.10.010},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{RN15,
+   author = {Fama, French},
+   title = {The cross-section of expected stock returns},
+   year = {1992},
+   type = {Journal Article}
+}
+
+@article{RN18,
+   author = {Fama, MacBeth},
+   title = {Risk, return, and equilibrium Empirical tests},
+   year = {1973},
+   type = {Journal Article}
+}
+
+@article{RN22,
+   author = {Fischer Black, Michael C. Jensen, Myron Scholes},
+   title = {The Capital Asset Pricing Model: Some Empirical Tests},
+   year = {1972},
+   type = {Journal Article}
+}
+
+@article{RN51,
+   author = {Foran, Jason and O'Sullivan, Niall},
+   title = {Liquidity risk and the performance of UK mutual funds},
+   journal = {International Review of Financial Analysis},
+   volume = {35},
+   pages = {178-189},
+   abstract = {We examine the role of liquidity risk, both as a stock characteristic as well as systematic liquidity risk, in UK mutual fund performance for the first time. We find that on average UK mutual funds are tilted towards liquid stocks (except for small stock funds as might be expected) but that, counter-intuitively, liquidity rather than illiquidity, as a stock characteristic is positively priced in the cross-section of fund performance. We find that systematic liquidity risk is positively priced in the cross-section of fund performance although controlling for momentum effects weakens the robustness of this finding somewhat. Overall, our results reveal a strong role for stock liquidity level and systematic liquidity risk in fund performance evaluation models.},
+   keywords = {Mutual fund performance
+Liquidity risk
+Liquidity characteristics},
+   ISSN = {1057-5219},
+   DOI = {https://doi.org/10.1016/j.irfa.2014.09.001},
+   url = {https://www.sciencedirect.com/science/article/pii/S1057521914001252},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{RN60,
+   author = {Foye, James},
+   title = {Testing alternative versions of the Fama–French five-factor model in the UK},
+   journal = {Risk Management},
+   volume = {20},
+   number = {2},
+   pages = {167-183},
+   ISSN = {1460-3799},
+   DOI = {10.1057/s41283-018-0034-3},
+   year = {2018},
+   type = {Journal Article}
+}
+
+@article{RN59,
+   author = {Gregory, Alan and Tharyan, Rajesh and Christidis, Angela},
+   title = {Constructing and Testing Alternative Versions of the Fama-French and Carhart Models in the UK},
+   journal = {Journal of Business Finance & Accounting},
+   volume = {40},
+   number = {1-2},
+   pages = {172-214},
+   ISSN = {0306-686X},
+   DOI = {10.1111/jbfa.12006},
+   url = {http://business-school.exeter.ac.uk/media/universityofexeter/businessschool/documents/centres/xfi/Gregory_Tharyan_Christidis_2013.pdf},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{RN40,
+   author = {Hanauer, Matthias},
+   title = {Risikofaktoren und Multifaktormodelle für den deutschen Aktienmarkt},
+   type = {Journal Article}
+}
+
+@article{RN33,
+   author = {Hanauer, Matthias X.},
+   title = {A comparison of Global factor models},
+   type = {Journal Article}
+}
+
+@article{RN39,
+   author = {Hanauer, Matthias Xaver},
+   title = {Risk factors and capital market anomalies},
+   type = {Journal Article}
+}
+
+@article{RN19,
+   author = {Hanauer, Matthias X. and Lauterbach, Jochim G.},
+   title = {The cross-section of emerging market stock returns},
+   journal = {Emerging Markets Review},
+   volume = {38},
+   pages = {265-286},
+   ISSN = {15660141},
+   DOI = {10.1016/j.ememar.2018.11.009},
+   year = {2019},
+   type = {Journal Article}
+}
+
+@article{RN20,
+   author = {Hou, Kewei and Xue, Chen and Zhang, Lu},
+   title = {Digesting Anomalies: An Investment Approach},
+   journal = {Review of Financial Studies},
+   volume = {28},
+   number = {3},
+   pages = {650-705},
+   ISSN = {0893-9454
+1465-7368},
+   DOI = {10.1093/rfs/hhu068},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{RN21,
+   author = {Jegadeesh, Titman},
+   title = {Returns to Buying Winners and Selling Losers Implications for Stock Market Efficiency},
+   year = {1993},
+   type = {Journal Article}
+}
+
+@article{RN49,
+   author = {Jiang, Ying and Cao, Yi and Liu, Xiaoquan and Zhai, Jia},
+   title = {Volatility modeling and prediction: the role of price impact},
+   journal = {Quantitative Finance},
+   volume = {19},
+   number = {12},
+   pages = {2015-2031},
+   ISSN = {1469-7688},
+   DOI = {10.1080/14697688.2019.1636123},
+   year = {2019},
+   type = {Journal Article}
+}
+
+@article{RN44,
+   author = {Landis, Conrad},
+   title = {Guidelines for asset pricing research using international equity data from Thomson Reuters Datastream},
+   type = {Journal Article}
+}
+
+@article{RN46,
+   author = {Lewellen, Jonathan},
+   title = {The Cross-section of Expected Stock Returns},
+   journal = {Critical Finance Review},
+   volume = {4},
+   number = {1},
+   pages = {1-44},
+   ISSN = {21645744
+21645760},
+   DOI = {10.1561/104.00000024},
+   year = {2015},
+   type = {Journal Article}
+}
+
+@article{RN41,
+   author = {Matthias X. Hanauer, Martin Linhart},
+   title = {Size, Value, and Momentum in Emerging Market Stock Returns: Integrated or Segmented Pricing},
+   type = {Journal Article}
+}
+
+@article{RN45,
+   author = {Matthias X. Hanauer, Steffen Windmüller},
+   title = {Enhanced Momentum Strategies},
+   type = {Journal Article}
+}
+
+@article{RN11,
+   author = {Michael J. Cooper, Huseyin Gulen, Michael J. Schill},
+   title = {Asset growth and the Cross Section of stock returns},
+   year = {2008},
+   type = {Journal Article}
+}
+
+@article{RN32,
+   author = {Michou, Maria and Mouselli, Sulaiman and Stark, Andrew},
+   title = {On the differences in measuring SMB and HML in the UK – Do they matter?},
+   journal = {The British Accounting Review},
+   volume = {46},
+   number = {3},
+   pages = {281-294},
+   ISSN = {0890-8389},
+   DOI = {10.1016/j.bar.2014.03.004},
+   url = {https://dx.doi.org/10.1016/j.bar.2014.03.004},
+   year = {2014},
+   type = {Journal Article}
+}
+
+@article{RN54,
+   author = {Norman Strong, Xinzhong G. Xu},
+   title = {Explaining The Cross-Section of UK Expected Stock Returns},
+   type = {Journal Article}
+}
+
+@article{RN23,
+   author = {Novy-Marx, Robert},
+   title = {The other side of value: The gross profitability premium},
+   journal = {Journal of Financial Economics},
+   volume = {108},
+   number = {1},
+   pages = {1-28},
+   ISSN = {0304405X},
+   DOI = {10.1016/j.jfineco.2013.01.003},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{RN58,
+   author = {Roland Füss, Christian Koeppel, Massimo Guidolin},
+   title = {Sentiment Risk Premia in the Cross-Section of Global Equity},
+   type = {Journal Article}
+}
+
+@article{RN52,
+   author = {Soares, Nuno and Stark, Andrew},
+   title = {Is There an Accruals or a Cash Flow Anomaly in UK Stock Returns?},
+   journal = {SSRN Electronic Journal},
+   DOI = {10.2139/ssrn.1734507},
+   year = {2011},
+   type = {Journal Article}
+}
+
+@article{RN30,
+   author = {Windmüller, Steffen and Pontiff, Jeffrey},
+   title = {Firm Characteristics and Global Stock Returns: A Conditional Asset Pricing Model},
+   journal = {The Review of Asset Pricing Studies},
+   volume = {12},
+   number = {2},
+   pages = {447-499},
+   ISSN = {2045-9920
+2045-9939},
+   DOI = {10.1093/rapstu/raab024},
+   year = {2022},
+   type = {Journal Article}
+}
+
+@article{RN53,
+   author = {Zhu, Sheng and Gao, Jun and Sherman, Meadhbh},
+   title = {The Role of Future Economic Conditions in the Cross-section of Stock Returns: Evidence from the US and UK},
+   journal = {Research in International Business and Finance},
+   volume = {52},
+   DOI = {10.1016/j.ribaf.2020.101193},
+   year = {2020},
+   type = {Journal Article}
+}
+
+@article{RN61,
+   author = {Zhu, Sheng and Gao, Jun and Sherman, Meadhbh},
+   title = {The Role of Future Economic Conditions in the Cross-section of Stock Returns: Evidence from the US and UK},
+   journal = {Research in International Business and Finance},
+   volume = {52},
+   DOI = {10.1016/j.ribaf.2020.101193},
+   year = {2020},
+   type = {Journal Article}
+}
+
