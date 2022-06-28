@@ -3,7 +3,7 @@
 % -------------------------------
 % --- PREAMBLE ---
 % -------------------------------
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,12pt]{article}
 
 \usepackage{amsmath,amssymb,amsfonts,amsthm}    % Typical maths resource packages
 \usepackage{graphicx}                           % Packages to allow inclusion of graphics
@@ -15,9 +15,18 @@
 % \usepackage[colorlinks=true]{hyperref}                           
 % \usepackage[bottom]{footmisc}                   
 \usepackage[bottom, flushmargin]{footmisc}                   % For footnotes
-\usepackage[citebordercolor={0 1 0}]{hyperref}                           % For creating hyperlinks in cross references
-\usepackage{footnotebackref}
+% \usepackage[citebordercolor={0 0 0}]{hyperref}     % citebordercolor={0 0 0}                           % For creating hyperlinks in cross references
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
+\usepackage{footnotebackref}
+% \usepackage{fancyhdr}
 % -------------------------------
 % --- some layout definitions ---
 % -------------------------------
@@ -30,22 +39,41 @@
 \ohead{\headmark}
 
 % define citation style
-\bibliographystyle{ecta}
+% \bibliographystyle{apalike}
 
 % define page size, margin size
+\usepackage[
+top    = 2cm,
+bottom = 2cm,
+left   = 2cm,
+right  = 5cm]{geometry}
+
 \setlength{\headheight}{1.1\baselineskip}
-\voffset=-2cm
-\hoffset=-3cm
-\textheight24cm
-\textwidth15.5cm
-\topmargin1cm
-\oddsidemargin3cm
-\evensidemargin3cm
+\setlength\parskip{6pt}
+\setlength\parindent{1cm}
+% \voffset=-2.54cm
+% \hoffset=-2.54cm
+% \textheight = 24cm
+% \textwidth = 15.5cm
+% \topmargin = 2cm
+% \oddsidemargin = 2cm
+% \evensidemargin = 2cm
+% \footskip = 1cm
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}   
 
+% % <!--- Define Headers and Footers --->
+% \fancypagestyle{plain}{%
+%   \renewcommand{\headrulewidth}{0pt}%
+%   \fancyhf{}%
+%   \fancyhead[L]{\footnotesize Page \thepage\, of\, \pageref*{LastPage}}
+%   \setlength\footskip{12pt}
+% }
+% \pagestyle{plain}
+
 % define line spacing = 1.5
 \renewcommand{\baselinestretch}{1.5}
+% \usepackage[onehalfspacing]{setspace}
 
 % define position of graphics
 \floatsetup[figure]{capposition=bottom}
@@ -215,232 +243,90 @@ busy reader to obtain quickly a clear idea of the thesis content.
 \setcounter{page}{1}    % start page numbering anew
 \pagenumbering{arabic}  % page numbers in arabic style
 
-\hypertarget{about-this-thesis-template}{%
-\section*{About this Thesis Template}\label{about-this-thesis-template}}
-\addcontentsline{toc}{section}{About this Thesis Template}
-
-Welcome to the thesis template. This template is based on (and in many places
-copied directly from) the HU Berlin School of Business and Economics LaTeX
-template, but hopefully it will provide a nicer interface for those that have
-never used LaTeX before.
-
-\hypertarget{why-use-r-markdown}{%
-\subsection*{Why use R Markdown?}\label{why-use-r-markdown}}
-\addcontentsline{toc}{subsection}{Why use R Markdown?}
-
-\emph{R Markdown} creates a simple and straightforward way to interface with the
-beauty of LaTeX. Packages have been written in \textbf{R} to work directly with LaTeX
-to produce nicely formatting tables and paragraphs.
-
-\emph{R Markdown} also allows you to read in your data, to analyze it and to
-visualize it using \textbf{R} functions, and also to provide the documentation and
-commentary on the results of your project. Using \emph{R Markdown} will also allow
-you to easily keep track of your analyses in \textbf{R} chunks of code, with the
-resulting plots and output included as well.
-
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 \begin{itemize}
+\tightlist
 \item
   What is the subject of the study? Describe the economic/econometric problem.
-\item
-  What is the purpose of the study (working hypothesis)?
-\item
-  What do we already know about the subject (literature review)? Use citations:
-  Lingenfelser, Wagner, and André (\protect\hyperlink{ref-lingenfelser2011systematic}{2011}) shows that\ldots{} Alternative Forms of the Wald test are
-  considered (\protect\hyperlink{ref-kuncheva2004combining}{Kuncheva 2004}).
-\item
-  What is the innovation of the study?
-\item
-  Provide an overview of your results.
-\item
-  Outline of the paper:\\
-  \emph{The paper is organized as follows. The next section describes the model
-  under investigation. Section ``\protect\hyperlink{data}{Data}'' describes the data set
-  and Section ``\protect\hyperlink{results}{Results}'' presents the results. Finally, Section
-  ``\protect\hyperlink{conclusion}{Conclusion}'' concludes.}
-\item
-  The introduction should not be longer than 4 pages.
 \end{itemize}
-\hypertarget{methodology}{%
-\section{Methodology}\label{methodology}}
+\hypertarget{literature-review}{%
+\section{Literature Review}\label{literature-review}}
+
+\hypertarget{cross-sectional-predictability-of-stock-returns-in-the-uk}{%
+\subsection{\texorpdfstring{\emph{Cross-Sectional Predictability of Stock Returns in the UK}}{Cross-Sectional Predictability of Stock Returns in the UK}}\label{cross-sectional-predictability-of-stock-returns-in-the-uk}}
+
+We begin this study by exploring the effectiveness of different predictors in equity asset pricing.
+The Capital Asset Pricing Model developed by Sharpe \footnote{\protect\hyperlink{ref-RN62}{(1964)}}, Lintner \footnote{\protect\hyperlink{ref-RN63}{(1965)}}, and Mossin \footnote{\protect\hyperlink{ref-RN64}{(1966)}} gives an intuitive and fundamental explanation in terms of the relation between asset returns and market performance with the following equation:
+\begin{equation}
+\tag{1}
+E\left[R_i\right]-E\left[R_f\right]=\beta_{i,M}\left(E\left[R_M\right]-E\left[R_f\right]\right)
+\end{equation}
+However, the empirical study of US stocks by Fama / MacBeth \footnote{\protect\hyperlink{ref-RN72}{(1973)}} confirms that the CAPM failed to explain the alpha calculated from the model as the intercept is way higher than the risk-free rate. They also imply the beta of the model could not capture the whole picture of the movement of stock returns and the actual relation between beta and return is flatter than that estimated by the CAPM. Twenty years later, Fama / French \footnote{\protect\hyperlink{ref-RN67}{(1992)}} further confirm in the cross-section of US stock returns, beta is empirically not priced. This result is validated by the low-beta or low-volatility effects shown in some recent studies such as Blitz / Van Vliet \footnote{\protect\hyperlink{ref-RN76}{(2007)}} and Baker / Haugen \footnote{\protect\hyperlink{ref-RN77}{(2012)}}. Roll \footnote{\protect\hyperlink{ref-RN78}{(1977)}} raises a famous critique that the CAPM requires a mean-variance effective market portfolio that is not observable and thus economists can only approximate the market with proxies such as a market index.
+
+We call these parts of stock returns that can't be explained by the CAPM anomalies. One of the most popular models trying to address the anomalies is the Fama / French \footnote{\protect\hyperlink{ref-RN66}{(1993)}} three-factor model, in which they demonstrate the explanatory power of size and book-to-market equity in the cross-section of average stock returns. The Fama / French \footnote{\protect\hyperlink{ref-RN66}{(1993)}} three-factor model can be boiled down to the following equation:
+\begin{equation}
+\tag{2}
+R_{i,t}=\alpha_i+\beta_{i,1}\left(R_M-R_{f,t}\right)+\beta_{i,2}SMB_t+\beta_{i,3}HML_t+\varepsilon_{i,t}
+\end{equation}
+In the equation above, \(R_{i,t}\), is the return of portfolio or asset \(i\) in the month \(t\), \(R_M-R_{f,t}\) is the market excess return, \(\varepsilon_{i,t}\) is the residual error, \(\alpha_i\) is the intercept item, \(\beta_{i,1}\),\(\beta_{i,2}\), and \(\beta_{i,3}\) measure the risk exposure to each of the three factors. After the birth of the three-factor model, it has become to some extent an industry standard to use the model and its approach to evaluate performance in asset pricing. Fama / French \footnote{\protect\hyperlink{ref-RN66}{(1993)}} use an independent double sort method to construct the factor portfolios and then calculate the value-weighted return of each portfolio. They sort stocks in 2 size groups and 3 book-to-market groups and hence 6 portfolios. With these sorted data, the return of SMB factor (Small minus Big) and HML factor (High minus Low) in every single month can be extracted by calculating the difference between the return of stocks with small and big market sizes and the difference between the return of stocks with high and low book-to-market values. Results in Fama / French \footnote{\protect\hyperlink{ref-RN80}{(1996)}} show that the three-factor model significantly outperforms the CAPM in explaining the cross-sectional returns of stocks in the US market and most of the anomalies except short-term momentum can be modeled by these three factors.
+
+Fama / French \footnote{\protect\hyperlink{ref-RN17}{(2015)}} update the three-factor model by introducing two new variables -- profitability factor or RMW (Robust minus Weak) and investment factor or CMA (Conservative minus Aggressive) -- partially motivated by a series of new factors proposed in the literature of asset pricing models. For example, Jegadeesh / Titman \footnote{\protect\hyperlink{ref-RN73}{(1993)}} propose a cross-sectional momentum premium and document that a strategy that longs winner stocks and shorts loser stocks over the last 3-12 months realizes significant extra returns. Similarly, Carhart \footnote{\protect\hyperlink{ref-RN81}{(1997)}} expands the three-factor model to a four-factor model by including a 12-month MoM factor (momentum) or WML factor (winners minus loser) as called in some literature. He uses the same way to construct the WML portfolio as Fama / French \footnote{\protect\hyperlink{ref-RN66}{(1993)}} to HML. Novy-Marx \footnote{\protect\hyperlink{ref-RN23}{(2013)}} finds controlling profitability can increase the performance of value portfolios and therefore proposes a gross profitability premium to explain this new anomaly. Sloan \footnote{\protect\hyperlink{ref-RN82}{(1996)}} documents an accrual anomaly that is due to the irrationality of investors. He suggests that an investment strategy that goes long on low accruals firms and short on high accruals firms yields an annual abnormal return of 10.4\%. Bradshaw et. al.\footnote{\protect\hyperlink{ref-RN83}{(2006)}} pointed out that net external financing is a negative indicator of future stock returns. The net external financing factor defined as an aggregate of corporate financing activities such as equity issuances, equity repurchases, debt issuances, etc., according to Bradshaw et. al.\footnote{\protect\hyperlink{ref-RN83}{(2006)}}, can yield an annual portfolio return of 15.5\%. Cooper et. al.\footnote{\protect\hyperlink{ref-RN75}{(2008)}} find total asset growth rate is a strong and dominant predictor of cross-sectional future returns and document a value-weighted return spread of 8.4\% per year between firms with low asset growth rates and firms with high asset growth rates. Hirshleifer et. al.\footnote{\protect\hyperlink{ref-RN84}{(2004)}} report the net operating assets factor, which is defined as the difference between cumulative earnings and cumulative free cash flow over time, is an indicator of the overoptimism of investors over the ``bloated'' accounting outcomes and therefore negatively predicts future returns. Some other research suggests that measures such as size-matched sales and leverage ratio also contain information about future returns (for example, Strong / Xu \footnote{\protect\hyperlink{ref-RN68}{(1997)}} employ the Fama-French approach to explain the cross-section of UK stock returns and find leverage ratio along with book-to-market equity has a consistent explanatory power for the UK expected stock returns over 1973-1992).
+
+Although the five-factor model of Fama / French \footnote{\protect\hyperlink{ref-RN17}{(2015)}} significantly increases the explanatory power by capturing from 71\% to 94\% of the cross-section variations of expected returns compared to their initial three-factor model, it has left some problems unanswered.\footnote{Blitz et. al., \protect\hyperlink{ref-RN69}{(2018)} also raise some more concerns with the Fama-French five-factor model.} For example, the HML variable seems to become redundant because the large average HML return is absorbed by the exposures of HML to the other four factors, especially the profitability and investment factors. Another problem of the Fama-French five-factor model, as pointed out by themselves, is ``its failure to capture the low average returns on small stocks whose returns behave like those of firms that invest a lot despite low profitability''. Hanauer / Lauterbach \footnote{\protect\hyperlink{ref-RN19}{(2019)}} show empirical evidence that the Fama-French five-factor model may not be optimal for emerging markets in terms of factor definitions. Most important, one prominent anomaly is still missing, namely the momentum anomaly. Asness et. al.\footnote{\protect\hyperlink{ref-RN71}{(2015)}} argued that a timelier HML (i.e., updated monthly with the latest market capitalization) together with a momentum factor creates a more robust model than the Fama-French five-factor model, thanks to the diversification benefits of value and its negative correlation with the momentum factor. Hanauer \footnote{\protect\hyperlink{ref-RN65}{(2020)}} confirms this result by showing that the six-factor model with a monthly updated value factor, a momentum factor, and a cash-based profitability factor outperforms the other six prominent models.
+
+Momentum is categorized as a ``persistence'' factor and hence tends to benefit from continued trends in markets. In the following analysis, our test results have confirmed that momentum contributes more than the other factors to explaining expected returns in UK stock markets. One of our main revisions to the Fama-French five-factor model is that we incorporate a system of momentum factors, i.e., seasonal MoM, 6-month MoM, and 12-month MoM, in our tests and model building. Jegadeesh and Lakonishok (1996) explain the momentum anomaly as a market inefficiency, which is caused by a slow reaction to information. However, according to De Long et. al.\footnote{\protect\hyperlink{ref-RN86}{(1990)}}, the effect of the momentum factors diminishes if stretched beyond 12 months. Carhart \footnote{\protect\hyperlink{ref-RN81}{(1997)}} shows that the momentum factor outperforms the standard Fama / French \footnote{\protect\hyperlink{ref-RN66}{(1993)}} three factors, namely excess market factor, size factor, and value factor. Heston / Sadka \footnote{\protect\hyperlink{ref-RN87}{(2010)}} consider the behavioral patterns of investors and thus introduce a seasonal momentum factor that measures seasonal predictability in the cross-section of stock returns. They confirm that the short-term momentum anomaly exists in Canada and Europe, but is not effective in Japan. They also find that in all cases longer-term momentum strategies are less profitable than short-term momentum strategies. Seasonal momentum tends to capture effects such as the widely documented January anomaly (i.e., the outperformance of smaller stocks in January, which can be explained by investors reentering the market after selling their stocks at year-end for tax purposes).
+
+In this paper, we follow a process similar to that in Hanauer \footnote{\protect\hyperlink{ref-RN65}{(2020)}}. We first examine the performances of a set of factors from different categories in the Fama / MacBeth \footnote{\protect\hyperlink{ref-RN72}{(1973)}} cross-sectional regressions. Then, we test the predictive power of expected returns based on the cross-sectional performances of factors in the same way as in Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}}.
+
+Here below is a summary of the out-of-sample predictive power test that is implemented in Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}}. Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} first defines 15 characteristics which are as he calls either level variables or flow variables, namely size, B/M, past 12-month stock returns, three-year share issuance, one-year accruals, profitability, asset growth, beta, dividend yield, one-year share issuance, three-year stock returns, 12-month volatility, 12-month turnover, market leverage, and the sales-to-price ratio. From these 15 characteristics, Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} derives 3 models based on the number of variables included. To align the accounting data with market data, a four-month lag was applied. That means accounting data are assumed to be observable by the end of April of year \(t\) for fiscal year \(t-1\). Subsequently, Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} conducts the Fama-MacBeth cross-sectional regressions as the basis of the out-of-sample test in the predictive powers of the three models. Essentially, the results of the regressions show that slopes on B/M, past 12-month returns (MoM), and profitability are significantly positive while the slopes on size, share issuance, accruals, and asset growth are significantly negative. As for the remaining variables, dividend yield, long-term returns, 12-month share issuance, and market leverage show no significant effect for the chosen sample. Turnover and the sales-to-price ratio are significant in the full-sample data with a -4.49 and 0.04 slope respectively. The effect of a firm's beta of the prior year is significantly positive over the return of the next year while the effect of volatility is significantly negative for some of the sample groups.
+
+The next step of Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} is to simulate what an investor would have forecast for expected returns using information from prior Fama-MacBeth regressions such as a 10-year rolling average of intercepts and slopes and a firm's beginning-of-month characteristics. The results of the forecast return distribution starting from 1964 reflect that adding more variables to the model slightly increases the dispersion of the forecasts. It also shows that for example in the full-sample group, the predictive powers (i.e., the slope of subsequent realized returns over forecasts of returns) range from 0.74 to 0.80 depending on the number of predictors when applying a 10-year rolling window. In this forecast test, Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} finds in all three models and three sample groups, the predictive abilities represented by the slope are statistically significant with a minimum t-statistic of 2.08. The empirical result can be useful because it demonstrates that Fama-MacBeth-based expected-return estimates have strong predictive power for subsequent stock returns and buying those stocks estimated to perform better can effectively achieve a higher return in the future. That lays the cornerstone of our investment strategy as Fama-MacBeth regression provides a reliable way to forecast future returns.
+
+Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} also carries out other forecast tests based on alternative rolling windows and finds that even using a rolling window as short as 12 months to get the Fama-MacBeth slopes, the predictive power is still relatively strong with nearly two-thirds of the slopes above 0.50. Furthermore, Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} points out that an equal-weighted or value-weighted High-minus-Low trading strategy based on the Fama-MacBeth expected return could be profitable. For example, a fund manager can achieve a Fama-French three-factor alpha of 0.53\% for value-weighted portfolios of large stocks. Lewellen \footnote{\protect\hyperlink{ref-RN46}{(2015)}} also proves that the predictive power of the Fama-MacBeth slopes in cross-sectional regressions still exists for at least one year by testing the forecasts of longer-horizon returns.
+
+\hypertarget{asset-allocation-methods}{%
+\subsection{\texorpdfstring{\emph{Asset allocation methods}}{Asset allocation methods}}\label{asset-allocation-methods}}
+
+As classified in Chow et. al.\footnote{\protect\hyperlink{ref-RN88}{(2011)}}, the currently practiced asset allocation models can be categorized into two classes: heuristic-based weighting and optimization-based weighting models. The heuristic-based weighting models are relatively simple asset allocation approaches mainly referring to the naïve equal-weighted approach or 1/N portfolio and the value-weighted approach. The optimization-based weighting models mainly consist of minimum-variance or minimum-volatility optimization, maximal Sharpe ratio optimization, and others such as Bayesian-estimation-based methods.
+
+The naïve equal-weighted approach is a strategy that allocates a 1/N equal weight to every asset in the portfolio. The value-weighted allocation approach, as its name implies, allocates a portion to every asset according to its market capitalization. The turnover of a value-weighted portfolio is zero. Most market indices such as S\&P 500 Index and Russell 1000 Index are value-weighted. Except for the two aforementioned simple-rule-based approaches, there are also several other choices for portfolio managers in this category. For example, Chow et. al.\footnote{\protect\hyperlink{ref-RN88}{(2011)}} test the ``Risk-Clusters Equal-Weighting'' approach which equally allocates funds over quantitatively defined risk clusters and the ``Diversity-Weighting'' approach which is set to blend equal-weighted portfolios and value-weighted portfolios. Arnott et. al.\footnote{\protect\hyperlink{ref-RN89}{(2005)}} also report a fundamental weighting approach that weights stocks by their accounting data such as sales and book value because they think market pricing error could lead to suboptimal allocations. Research also reports other risk-balanced weighting methods such as the risk parity approach by Ledoit / Wolf \footnote{\protect\hyperlink{ref-RN91}{(2004)}} which weights stocks counter-proportionally to their variances.
+
+Minimum-variance optimization utilizes the low-volatility anomaly which indicates stocks with lower volatility often have a higher return-to-risk ratio. It aims to minimize the volatility of the portfolio and implicitly assumes that the expected returns of all stocks are all the same. The objective function of the optimization problem can be written as:
+\begin{equation}
+\tag{3}
+\min\limits_{\omega}{\omega^\prime\Sigma\omega}
+\end{equation}
+where \(\omega\) is the vector of weights and \(\Sigma\) is the estimated covariance matrix of expected returns. Chow et. al.\footnote{\protect\hyperlink{ref-RN88}{(2011)}} show that the minimum-variance strategy achieves a top Sharpe ratio among all seven tested strategies (2/7 in global developed portfolios and 1/7 in U.S. portfolios) although it also reports the highest tracking error in both markets.
+
+Maximal Sharpe ratio optimization is a further improvement on the minimum-variance optimization. It aims at calculating the weights that maximize the ex ante Sharpe ratio. Chow et. al.\footnote{\protect\hyperlink{ref-RN88}{(2011)}} form two maximal Sharpe ratio portfolios with the return volatility \(\sigma_i\) and downside semi-volatility \(\widehat{\sigma_i}\) as a proxy for estimated return, respectively. They reported strong Sharpe ratios for both strategies and high annual excess returns over the benchmark (2.52\% and 3.00\% for U.S. portfolios, respectively). On the other hand, higher one-way turnover rates (56.02\% and 34.19\% respectively) are not surprising. They enforced no short-selling and a concentration of weight limited to 10\% in the concentration. They also follow Ledoit / Wolf \footnote{\protect\hyperlink{ref-RN91}{(2004)}} by using a similar shrinkage method in estimating volatilities and covariance matrix. Hanauer / Lauterbach \footnote{\protect\hyperlink{ref-RN19}{(2019)}} applied the maximal Sharpe ratio optimization to their emerging market factor model and report a good outperformance over all other investment strategy combinations with a Sharpe ratio of 0.95. Bielstein / Hanauer \footnote{\protect\hyperlink{ref-RN36}{(2018)}} introduce a new method to implement maximal Sharpe ratio optimization. They applied the earnings-forecasts-based implied cost of capital (ICC) rather than the Fama-French-based expected return as an estimate of stock return in the maximum Sharpe ratio problem to reduce the estimation errors. To correct for analysts' sluggishness with earnings forecasts, they add the rescaled momentum and subtract the risk-free rate to get the expected excess return. Their insightful results show that the maximum Sharpe ratio portfolio using the adjusted ICC measure largely outperforms the other tested optimization models such as the equally-weighted portfolio and the minimum-variance portfolio.
+
+\hypertarget{data-and-methodology}{%
+\section{Data and Methodology}\label{data-and-methodology}}
 \begin{itemize}
-\item
-  How was the data analyzed ?
-\item
-  Present the underlying economic model/theory and give reasons why it is
-  suitable to answer the given problem\footnote{Here is an example of a footnote.}.
-\item
-  Present econometric/statistical estimation method and give reasons why it is
-  suitable to answer the given problem.
-\item
-  Allows the reader to judge the validity of the study and its findings.
-\item
-  Depending on the topic this section can also be split up into separate
-  sections.
-\end{itemize}
-\hypertarget{data}{%
-\section{Data}\label{data}}
-\begin{itemize}
+\tightlist
 \item
   Describe the data and its quality.
-\item
-  How was the data sample selected?
-\item
-  Provide descriptive statistics such as:
-  \begin{itemize}
-  \item
-    time period,
-  \item
-    item number of observations, data frequency,
-  \item
-    item mean, median,
-  \item
-    item min, max, standard deviation,
-  \item
-    item skewness, kurtosis, Jarque--Bera statistic,
-  \item
-    item time series plots, histogram.
-  \end{itemize}
-\item
-  For example:
-\end{itemize}
-\begin{table}[H]
-
-\caption{\label{tab:table1}Detailed descriptive statistics of location and dispersion for 2100 observed swap rates for the period from February 15, 1999 to March 2, 2007. Swap rates measured as 3.12 (instead of 0.0312).}
-\centering
-\begin{tabular}[t]{lrrrrrrrrrr}
-\toprule
-  & 3m & 6m & 1yr & 2yr & 3yr & 5yr & 7yr & 10yr & 12yr & 15yr\\
-\midrule
-Mean & 3.138 & 3.191 & 3.307 & 3.544 & 3.756 & 4.093 & 4.354 & 4.621 & 4.741 & 4.878\\
-StD & 0.915 & 0.919 & 0.935 & 0.910 & 0.876 & 0.825 & 0.803 & 0.776 & 0.768 & 0.762\\
-\midrule
-\bottomrule
-\end{tabular}
-\end{table}
-\begin{itemize}
-\item
-  Allows the reader to judge whether the sample is biased or to evaluate
-  possible impacts of outliers, for example.
-\item
-  Here tables can be easily integrated using the \texttt{kable()} function in the
-  \texttt{knitr} package (with perhaps some additional help from the \texttt{kableExtra}
-  package). \texttt{kable()} will automatically generate a label for the table
-  environment. That way you don't have to manually enter in the table in LaTex,
-  you can embed tables from R code.
-\item
-  Tables can be referenced using \texttt{\textbackslash{}@ref(label)}, where \texttt{label} is \texttt{tab:\textless{}name\textgreater{}},
-  where \texttt{\textless{}name\textgreater{}} is the code chunk label.
-\item
-  The appearance may look different to tables directly typed with LaTex, due to
-  limitations in \texttt{kable()}. To compare:
-  \begin{table}[ht]
-    \begin{center}
-        {\footnotesize
-        \begin{tabular}{l|cccccccccc}
-            \hline \hline
-                      & 3m    & 6m    & 1yr   & 2yr   & 3yr   & 5yr   & 7yr   & 10yr  & 12yr  & 15yr   \\
-            \hline
-                Mean   & 3.138 & 3.191 & 3.307 & 3.544 & 3.756 & 4.093 & 4.354 & 4.621 & 4.741 & 4.878  \\
-                StD    & 0.915 & 0.919 & 0.935 & 0.910 & 0.876 & 0.825 & 0.803 & 0.776 & 0.768 & 0.762  \\
-            \hline \hline
-        \end{tabular}}
-    \end{center}
-    \caption{This table was handwritten with LaTeX.}
-    \label{tab:table2}
-    \end{table}
 \end{itemize}
 \hypertarget{results}{%
 \section{Results}\label{results}}
 \begin{itemize}
+\tightlist
 \item
   Organize material and present results.
-\item
-  Use tables, figures (but prefer visual presentation):
-  \begin{itemize}
-  \item
-    Tables and figures should supplement (and not duplicate) the text.
-  \item
-    Tables and figures should be provided with legends.
-  \item
-    \emph{Figure \ref{fig:graph} shows how to include and reference graphics.
-    The graphic must be labelled before. Files must be in \textbf{.eps} format. You
-    can do this really easily in R Markdown with \texttt{knitr::include\_graphics()}}!
-  \item
-    Figures can be referenced with \texttt{\textbackslash{}@ref(fig:\textless{}name\textgreater{})}, where \texttt{\textless{}name\textgreater{}} is the
-    name of the code chunk.
-  \end{itemize}
-\end{itemize}
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{figures/graph} 
-
-}
-
-\caption{Estimated residuals from model XXX. ...}\label{fig:graph}
-\end{figure}
-\begin{itemize}
-\item
-  Tables and graphics may appear in the text or in the appendix, especially if
-  there are many simulation results tabulated, but is also depends on the study
-  and number of tables resp. figures. The key graphs and tables must appear in
-  the text!
-\item
-  R Markdown can also supports math equations just like \emph{LaTeX}!
-  \begin{itemize}
-  \item
-    \emph{Equation \eqref{eq:SpecDens} represents the ACs of a stationary
-    stochastic process:}
-    \begin{equation}
-            f_y(\lambda) = (2\pi)^{-1} \sum_{j=-\infty}^{\infty}
-                           \gamma_j e^{-i\lambda j}
-                         =(2\pi)^{-1}\left(\gamma_0 + 2 \sum_{j=1}^{\infty}
-        \gamma_j \cos(\lambda j)\right)
-                                       \label{eq:SpecDens}
-    \end{equation}
-    \emph{where \(i=\sqrt{-1}\) is the imaginary unit, \(\lambda \in [-\pi, \pi]\) is the
-    frequency and the \(\gamma_j\) are the autocovariances of \(y_t\).}
-  \item
-    Equations can be referenced with \texttt{\textbackslash{}@ref(eq:\textless{}name\textgreater{})}, where name is defined
-    by adding \texttt{(\textbackslash{}\#eq:\textless{}name\textgreater{})} in the line immediately before \texttt{\textbackslash{}end\{equation\}}.
-  \end{itemize}
-\end{itemize}
-\hypertarget{review-of-results}{%
-\subsection{Review of Results}\label{review-of-results}}
-\begin{itemize}
-\item
-  Do the results support or do they contradict economic theory ?
-\item
-  What does the reader learn from the results?
-\item
-  Try to give an intuition for your results.
-\item
-  Provide robustness checks.
-\item
-  Compare to previous research.
 \end{itemize}
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 \begin{itemize}
+\tightlist
 \item
   Give a short summary of what has been done and what has been found.
-\item
-  Expose results concisely.
-\item
-  Draw conclusions about the problem studied. What are the implications of your
-  findings?
-\item
-  Point out some limitations of study (assist reader in judging validity of
-  findings).
-\item
-  Suggest issues for future research.
 \end{itemize}
 \newpage
 
-\hypertarget{references}{%
-\section*{References}\label{references}}
-\addcontentsline{toc}{section}{References}
+\hypertarget{list-of-references}{%
+\section*{List of References}\label{list-of-references}}
+\addcontentsline{toc}{section}{List of References}
 
 \noindent
 
@@ -450,18 +336,136 @@ StD & 0.915 & 0.919 & 0.935 & 0.910 & 0.876 & 0.825 & 0.803 & 0.776 & 0.768 & 0.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-kuncheva2004combining}{}}%
-Kuncheva, Ludmila I. 2004. \emph{Combining Pattern Classifiers: Methods and Algorithms}. John Wiley \& Sons.
+\leavevmode\vadjust pre{\hypertarget{ref-RN90}{}}%
+Anderson, Robert M et. al. (2012): Will my risk parity strategy outperform?, in: Financial Analysts Journal, Heft 6 (68) 201275--93.
 
-\leavevmode\vadjust pre{\hypertarget{ref-lingenfelser2011systematic}{}}%
-Lingenfelser, Florian, Johannes Wagner, and Elisabeth André. 2011. {``A Systematic Discussion of Fusion Techniques for Multi-Modal Affect Recognition Tasks.''} In \emph{Proceedings of the 13th International Conference on Multimodal Interfaces}, 19--26. ACM.
+\leavevmode\vadjust pre{\hypertarget{ref-RN89}{}}%
+Arnott, Robert D et. al. (2005): Fundamental indexation, in: Financial Analysts Journal, Heft 2 (61) 200583--99.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN71}{}}%
+Asness, Clifford et. al. (2015): Fact, fiction, and value investing, in: The Journal of Portfolio Management, Heft 1 (42) 201534--52.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN77}{}}%
+Baker, Nardin L / Haugen, Robert A (2012): Low risk stocks outperform within all observable markets of the world, in: Available at SSRN 2055431 2012.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN35}{}}%
+Bessler, Wolfgang et. al. (2021): \href{https://doi.org/10.1057/s41260-021-00225-1}{Factor investing and asset allocation strategies: a comparison of factor versus sector optimization}, in: Journal of Asset Management, Heft 6 (22) 2021488--506.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN36}{}}%
+Bielstein, Patrick / Hanauer, Matthias X. (2018): \href{https://doi.org/10.1007/s11156-018-0727-4}{Mean-variance optimization using forward-looking return estimates}, in: Review of Quantitative Finance and Accounting, Heft 3 (52) 2018815--840.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN69}{}}%
+Blitz, David et. al. (2018): Five concerns with the five-factor model, in: The Journal of Portfolio Management, Heft 4 (44) 201871--78.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN76}{}}%
+Blitz, David C / Van Vliet, Pim (2007): The volatility effect, in: The Journal of Portfolio Management, Heft 1 (34) 2007102--113.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN83}{}}%
+Bradshaw, Mark T et. al. (2006): The relation between corporate financing activities, analysts' forecasts and stock returns, in: Journal of accounting and economics, Heft 1-2 (42) 200653--85.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN81}{}}%
+Carhart, Mark M (1997): On persistence in mutual fund performance, in: The Journal of finance, Heft 1 (52) 199757--82.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN85}{}}%
+Chan, Louis KC et. al. (1996): Momentum strategies, in: The Journal of Finance, Heft 5 (51) 19961681--1713.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN88}{}}%
+Chow, Tzee-man et. al. (2011): A survey of alternative equity index strategies, in: Financial Analysts Journal, Heft 5 (67) 201137--57.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN75}{}}%
+Cooper, Michael J et. al. (2008): Asset growth and the cross‐section of stock returns, in: the Journal of Finance, Heft 4 (63) 20081609--1651.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN86}{}}%
+De Long, J Bradford et. al. (1990): Positive feedback investment strategies and destabilizing rational speculation, in: the Journal of Finance, Heft 2 (45) 1990379--395.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN17}{}}%
+Fama, Eugene F. / French, Kenneth R. (2015): \href{https://doi.org/10.1016/j.jfineco.2014.10.010}{A five-factor asset pricing model}, in: Journal of Financial Economics, Heft 1 (116) 20151--22.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN67}{}}%
+Fama, Eugene F / French, Kenneth R (1992): The cross‐section of expected stock returns, in: the Journal of Finance, Heft 2 (47) 1992427--465.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN66}{}}%
+Fama, Eugene F / French, Kenneth R (1993): Common risk factors in the returns on stocks and bonds, in: Journal of financial economics, Heft 1 (33) 19933--56.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN80}{}}%
+Fama, Eugene F / French, Kenneth R (1996): Multifactor explanations of asset pricing anomalies, in: The journal of finance, Heft 1 (51) 199655--84.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN72}{}}%
+Fama, Eugene F / MacBeth, James D (1973): Risk, return, and equilibrium: Empirical tests, in: Journal of political economy, Heft 3 (81) 1973607--636.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN51}{}}%
+Foran, Jason / O'Sullivan, Niall (2014): Liquidity risk and the performance of UK mutual funds, in: International Review of Financial Analysis (35) 2014178--189, URL: \url{https://www.sciencedirect.com/science/article/pii/S1057521914001252}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN60}{}}%
+Foye, James (2018): \href{https://doi.org/10.1057/s41283-018-0034-3}{Testing alternative versions of the Fama--French five-factor model in the UK}, in: Risk Management, Heft 2 (20) 2018167--183.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN59}{}}%
+Gregory, Alan et. al. (2013): Constructing and Testing Alternative Versions of the Fama-French and Carhart Models in the UK, in: Journal of Business Finance \& Accounting, Heft 1-2 (40) 2013172--214, URL: \url{http://business-school.exeter.ac.uk/media/universityofexeter/businessschool/documents/centres/xfi/Gregory_Tharyan_Christidis_2013.pdf}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN65}{}}%
+Hanauer, Matthias X (2020): A comparison of global factor models, in: Available at SSRN 3546295 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN19}{}}%
+Hanauer, Matthias X. / Lauterbach, Jochim G. (2019): \href{https://doi.org/10.1016/j.ememar.2018.11.009}{The cross-section of emerging market stock returns}, in: Emerging Markets Review (38) 2019265--286.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN74}{}}%
+Hanauer, Matthias X / Windmüller, Steffen (2020): Enhanced momentum strategies, in: Available at SSRN 3437919 2020.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN87}{}}%
+Heston, Steven L / Sadka, Ronnie (2010): Seasonality in the cross section of stock returns: the international evidence, in: Journal of Financial and Quantitative Analysis, Heft 5 (45) 20101133--1160.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN84}{}}%
+Hirshleifer, David et. al. (2004): Do investors overvalue firms with bloated balance sheets?, in: Journal of Accounting and Economics (38) 2004297--331.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN20}{}}%
+Hou, Kewei et. al. (2015): \href{https://doi.org/10.1093/rfs/hhu068}{Digesting Anomalies: An Investment Approach}, in: Review of Financial Studies, Heft 3 (28) 2015650--705.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN73}{}}%
+Jegadeesh, Narasimhan / Titman, Sheridan (1993): Returns to buying winners and selling losers: Implications for stock market efficiency, in: The Journal of finance, Heft 1 (48) 199365--91.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN49}{}}%
+Jiang, Ying et. al. (2019): \href{https://doi.org/10.1080/14697688.2019.1636123}{Volatility modeling and prediction: the role of price impact}, in: Quantitative Finance, Heft 12 (19) 20192015--2031.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN91}{}}%
+Ledoit, Olivier / Wolf, Michael (2004): A well-conditioned estimator for large-dimensional covariance matrices, in: Journal of multivariate analysis, Heft 2 (88) 2004365--411.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN46}{}}%
+Lewellen, Jonathan (2015): \href{https://doi.org/10.1561/104.00000024}{The Cross-section of Expected Stock Returns}, in: Critical Finance Review, Heft 1 (4) 20151--44.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN63}{}}%
+Lintner, John (1965): Security prices, risk, and maximal gains from diversification, in: The journal of finance, Heft 4 (20) 1965587--615.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN32}{}}%
+Michou, Maria et. al. (2014): On the differences in measuring SMB and HML in the UK -- Do they matter?, in: The British Accounting Review, Heft 3 (46) 2014281--294, URL: \url{https://dx.doi.org/10.1016/j.bar.2014.03.004}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN64}{}}%
+Mossin, Jan (1966): Equilibrium in a capital asset market, in: Econometrica: Journal of the econometric society 1966768--783.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN23}{}}%
+Novy-Marx, Robert (2013): \href{https://doi.org/10.1016/j.jfineco.2013.01.003}{The other side of value: The gross profitability premium}, in: Journal of Financial Economics, Heft 1 (108) 20131--28.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN78}{}}%
+Roll, Richard (1977): A critique of the asset pricing theory's tests Part I: On past and potential testability of the theory, in: Journal of financial economics, Heft 2 (4) 1977129--176.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN62}{}}%
+Sharpe, William F (1964): Capital asset prices: A theory of market equilibrium under conditions of risk, in: The journal of finance, Heft 3 (19) 1964425--442.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN82}{}}%
+Sloan, Richard G (1996): Do stock prices fully reflect information in accruals and cash flows about future earnings?, in: Accounting review 1996289--315.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN70}{}}%
+Soares, Nuno / Stark, Andrew W (2011): Is there an accruals or a cash flow anomaly in UK stock returns?, in: Available at SSRN 1734507 2011.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN68}{}}%
+Strong, Norman / Xu, Xinzhong G (1997): Explaining the cross-section of UK expected stock returns, in: The British Accounting Review, Heft 1 (29) 19971--23.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN30}{}}%
+Windmüller, Steffen / Pontiff, Jeffrey (2022): \href{https://doi.org/10.1093/rapstu/raab024}{Firm Characteristics and Global Stock Returns: A Conditional Asset Pricing Model}, in: The Review of Asset Pricing Studies, Heft 2 (12) 2022447--499.
+
+\leavevmode\vadjust pre{\hypertarget{ref-RN53}{}}%
+Zhu, Sheng et. al. (2020): \href{https://doi.org/10.1016/j.ribaf.2020.101193}{The Role of Future Economic Conditions in the Cross-section of Stock Returns: Evidence from the US and UK}, in: Research in International Business and Finance (52) 2020.
 
 \end{CSLReferences}
-\indent
-\setlength{\parindent}{17pt}
-\setlength{\leftskip}{0pt}
-\setlength{\parskip}{0pt}
-
 \newpage
 
 \appendix
@@ -473,37 +477,6 @@ Here goes the appendix!
 
 \hypertarget{figures}{%
 \subsection{Figures}\label{figures}}
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth,]{figures/graph} 
-
-}
-
-\caption{Estimated residuals (2) from model XXX. ...}\label{fig:graph2}
-\end{figure}
-\hypertarget{tables}{%
-\subsection{Tables}\label{tables}}
-\begin{table}[ht]
-    \begin{center}
-        {\footnotesize
-        \begin{tabular}{l|cccccccccc}
-        \hline \hline
-                        & 3m    & 6m    & 1yr   & 2yr   & 3yr   & 5yr   & 7yr   & 10yr  & 12yr  & 15yr   \\
-            \hline
-                Mean   & 3.138 & 3.191 & 3.307 & 3.544 & 3.756 & 4.093 & 4.354 & 4.621 & 4.741 & 4.878  \\
-                Median & 3.013 & 3.109 & 3.228 & 3.490 & 3.680 & 3.906 & 4.117 & 4.420 & 4.575 & 4.759  \\
-                Min    & 1.984 & 1.950 & 1.956 & 2.010 & 2.240 & 2.615 & 2.850 & 3.120 & 3.250 & 3.395  \\
-                Max    & 5.211 & 5.274 & 5.415 & 5.583 & 5.698 & 5.805 & 5.900 & 6.031 & 6.150 & 6.295  \\
-                StD    & 0.915 & 0.919 & 0.935 & 0.910 & 0.876 & 0.825 & 0.803 & 0.776 & 0.768 & 0.762  \\
-            \hline \hline
-        \end{tabular}}
-    \end{center}
-    \caption{Detailed descriptive statistics of location and dispersion for
-    2100 observed swap rates for the period from
-    February 15, 1999 to March 2, 2007. Swap rates measured as 3.12 (instead of 0.0312).}
-    \label{tab:apptable}
-\end{table}
-\newpage
 
 % change rmd_files in `_bookdown.yml` files to determine order
 % note that references and appendix are also contained here.

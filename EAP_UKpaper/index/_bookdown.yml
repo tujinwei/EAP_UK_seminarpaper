@@ -1,7 +1,7 @@
 book_filename: "thesis"
 rmd_files: ["index.Rmd",
   "sections/01-intro.Rmd",
-  "sections/02-method.Rmd",
+  "sections/02-literature.Rmd",
   "sections/03-data.Rmd",
   "sections/04-results.Rmd", 
   "sections/05-conclusion.Rmd", 
@@ -9,5 +9,7 @@ rmd_files: ["index.Rmd",
   "sections/99-appendix.Rmd"
   ]
 output_dir: "thesis-output"
-download: ["thesis.pdf", "PDF"]
+download: [
+  ["thesis.pdf", "PDF"],
+  ["thesis.docx", "Word"]]
 delete_merged_file: true

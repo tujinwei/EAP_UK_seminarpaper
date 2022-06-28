@@ -1,7 +1,9 @@
+<!-- \backmatter -->
 \newpage
 
-# References {-}
+# List of References {-}
 
+<!-- \markboth{References}{References} -->
 <!--
 To remove the indentation of the first entry.
 -->
@@ -21,9 +23,9 @@ To create a hanging indent and spacing between entries.  These three lines may n
 Restore to defaults
 -->
 
-\indent
-\setlength{\parindent}{17pt}
-\setlength{\leftskip}{0pt}
-\setlength{\parskip}{0pt}
+<!-- \indent -->
+<!-- \setlength{\parindent}{17pt} -->
+<!-- \setlength{\leftskip}{0pt} -->
+<!-- \setlength{\parskip}{0pt} -->
 
 \newpage

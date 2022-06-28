@@ -1,0 +1,15 @@
+\contentsline {section}{Acknowledgements}{i}{section*.2}%
+\contentsline {section}{Abstract}{ii}{section*.3}%
+\contentsline {section}{List of Abbreviations}{iv}{section*.5}%
+\contentsline {section}{List of Figures}{v}{section*.6}%
+\contentsline {section}{List of Tables}{vi}{section*.7}%
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Literature Review}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\emph {Cross-Sectional Predictability of Stock Returns in the UK}}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}\emph {Asset allocation methods}}{7}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Data and Methodology}{9}{section.3}%
+\contentsline {section}{\numberline {4}Results}{9}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}%
+\contentsline {section}{List of References}{11}{section*.11}%
+\contentsline {section}{\numberline {A}Appendix}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Figures}{15}{subsection.A.1}%
